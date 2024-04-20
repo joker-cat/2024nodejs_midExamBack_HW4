@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "3d6820b5-d2da-4003-a7d6-2d05d3f8eb94",
+		"name": "2024nodejs_hw3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29889308"
+	},
+	"item": [
+		{
+			"name": "getPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://two024nodejs-express-hw3.onrender.com/post",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-express-hw3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"小美\",\r\n    \"content\": \"烤肉\",\r\n    \"type\":\"eat\",\r\n    \"tags\":[\"休閒\",\"吃吃喝喝\"],\r\n     \"likes\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://two024nodejs-express-hw3.onrender.com/post",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-express-hw3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delPost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://two024nodejs-express-hw3.onrender.com/post/66211f3593be1b9212702331",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-express-hw3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post",
+						"66211f3593be1b9212702331"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delAllPost",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://two024nodejs-express-hw3.onrender.com/post",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-express-hw3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patchPost",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"小恩\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://two024nodejs-express-hw3.onrender.com/post/66211f6993be1b9212702339",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-express-hw3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post",
+						"66211f6993be1b9212702339"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
