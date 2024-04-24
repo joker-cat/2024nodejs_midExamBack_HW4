@@ -1,6 +1,7 @@
 const { resSuccessWrite, resFaildWrite } = require("../module/resModule");
 const { validateKey } = require("../module/validateModule");
 const { Post } = require("../model/PostModel");
+
 class apiClass {
   constructor(app) {
     this.app = app;

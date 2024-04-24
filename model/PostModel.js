@@ -34,7 +34,7 @@ const [schema, options] = [
     },
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now,
     },
   },
   {
