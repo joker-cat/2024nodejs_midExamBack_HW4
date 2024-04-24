@@ -1,11 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const cors = require('cors');
 const { apiClass } = require("./routes/posts");
 const { userClass } = require("./routes/users");
 const { resFaildWrite } = require("./module/resModule");
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // 引用環境變數檔
 dotenv.config({ path: "./config.env" });

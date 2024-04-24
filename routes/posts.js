@@ -1,6 +1,7 @@
 const { resSuccessWrite, resFaildWrite } = require("../module/resModule");
 const { validateKey } = require("../module/validateModule");
 const { Post } = require("../model/PostModel");
+const { User } = require("../model/UserModel");
 
 class apiClass {
   constructor(app) {
@@ -9,9 +10,14 @@ class apiClass {
   }
 
   getPost() {
-    this.app.get("/post", async (req, res) => {
+    this.app.get(`/post`, async (req, res) => {
       try {
-        const data = await this.Post.find();
+        const timeSort = req.query.timeSort == "asc" ? "createdAt":"-createdAt"
+        const q = req.query.q !== undefined ? {"content": new RegExp(req.query.q)} : {};
+        const data = await this.Post.find(q).populate({
+          path: "user",
+          select: "name photo",
+        }).sort(timeSort);
         resSuccessWrite(res, 200, data);
       } catch (error) {
         resFaildWrite(res, 400, "請求出錯!!!");
@@ -21,8 +27,9 @@ class apiClass {
   postPost() {
     this.app.post("/post", async (req, res) => {
       try {
+        console.log();
         const reqObj = req.body;
-        const { name, content, type } = reqObj;
+        const { user, content } = reqObj;
         // for (const key in reqObj) {
         //   if (Object.hasOwnProperty.call(reqObj, key)) {
         //     const element = reqObj[key];
@@ -30,7 +37,7 @@ class apiClass {
         //   }
         // }
         // return
-        if (name !== undefined && content !== undefined && type !== undefined) {
+        if (user !== undefined && content !== undefined) {
           const newPost = await this.Post.create(reqObj);
           resSuccessWrite(res, 200, newPost);
         } else {
