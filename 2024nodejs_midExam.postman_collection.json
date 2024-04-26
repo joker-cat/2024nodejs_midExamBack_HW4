@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "fa0bf581-5c24-4ee8-a94c-a8adb2498d02",
+		"name": "2024nodejs_midExam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29889308"
+	},
+	"item": [
+		{
+			"name": "getPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://two024nodejs-midexamback-hw4.onrender.com/post",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-midexamback-hw4",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://two024nodejs-midexamback-hw4.onrender.com/user",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-midexamback-hw4",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"_id\": \"66235ff441b5d1d61a5e9bb5\",\r\n        \"name\": \"Tom Cat\",\r\n        \"photo\": \"https://storage.googleapis.com/vue-course-api.appspot.com/joooker/1713595501402.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=EuUdnlDaF8%2BcqyJakDl6r2PY8%2FwZ3Gf2bKLxEhZgSrgJJ304psijBadHxhWPxCJZIHmEc0IajR97EoMZSjKdhljmvlkHG%2FZtorV0zQwf3Xphfg45DRPI5uLnLKgHzt7Kh7ROF5kBJrLxLSxfv3IgfOD2OmaGcDwRVzY%2BUaWHKbZtg5FUgSdfPPhNesWf0GUxuc%2BjKwlnMQ1TRFqdS3O%2BLhJhYI1JWFn1VlaLK7MlOcNi7ZuJ0pDbZ0UP2n%2BWGz3eqzFfpkFgAh1sR6oWF9aXHzezzzAn76IlUzmgS9ha4dnMXF%2F89Rp5fLKS4pjTPT13keuy%2FJNlWUkl9pB7a9j7og%3D%3D\"\r\n    },\r\n    \"image\": \"https://s.yimg.com/ny/api/res/1.2/v2ics1Z_DbOFT6wrjTaxGw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/os/creatr-uploaded-images/2022-06/3757bb00-eca8-11ec-bf3f-7c2b69f1b53a\",\r\n    \"content\": \"我由postman發送\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://two024nodejs-midexamback-hw4.onrender.com/post",
+					"protocol": "https",
+					"host": [
+						"two024nodejs-midexamback-hw4",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
