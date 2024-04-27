@@ -29,6 +29,10 @@ createClass.postPost();
 createClass.notFound();
 createClass.reqOptions();
 
+app.get("/", async (req, res) => {
+  res.send('2024nodejs_midExam_期中作業');
+});
+
 // 刪除 修改
 // createClass.delPost();
 // createClass.delAllPost();
